@@ -1,7 +1,6 @@
 # KeyShield — Keylogger Detection Tool
 
-An original, from-scratch Linux keylogger detector with a professional
-Metasploit-style terminal UI.
+
 
 ## Features
 
