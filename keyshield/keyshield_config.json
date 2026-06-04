@@ -1,0 +1,16 @@
+{
+    "whitelist": [
+        "sddm",
+        "gnome-shell",
+        "gdm",
+        "lightdm",
+        "systemd",
+        "Xorg",
+        "systemd-logind"
+    ],
+    "blacklist": [],
+    "kbd_identifiers": [
+        "keyboard",
+        "kbd"
+    ]
+}

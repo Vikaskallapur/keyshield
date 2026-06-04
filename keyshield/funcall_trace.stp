@@ -1,0 +1,20 @@
+/*
+ * funcall_trace.stp  –  KeyShield kernel probe
+ * Author: (your name here)
+ *
+ * Fires when any code calls register_keyboard_notifier(),
+ * which is the kernel API a keylogger module must use to
+ * intercept keystrokes at the kernel level.
+ *
+ * Usage (called internally by kld_engine.py):
+ *   stap funcall_trace.stp -T 10
+ *
+ * Outputs "[-]" and exits if the call is observed within
+ * the timeout window; exits silently otherwise.
+ */
+
+probe kernel.function("register_keyboard_notifier").call
+{
+    print("[-]")
+    exit()
+}

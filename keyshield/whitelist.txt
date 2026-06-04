@@ -1,0 +1,84 @@
+Module                  Size  Used by
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+snd_seq               118784  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+qrtr                   57344  2
+rfkill                 45056  2
+vboxsf                 49152  1
+sunrpc                884736  1
+binfmt_misc            28672  1
+intel_rapl_msr         20480  0
+intel_rapl_common      57344  1 intel_rapl_msr
+intel_uncore_frequency_common    16384  0
+intel_pmc_core        155648  0
+pmt_telemetry          16384  1 intel_pmc_core
+pmt_discovery          20480  1 pmt_telemetry
+pmt_class              20480  2 pmt_telemetry,pmt_discovery
+intel_pmc_ssram_telemetry    16384  1 intel_pmc_core
+intel_vsec             28672  2 intel_pmc_ssram_telemetry,pmt_telemetry
+rapl                   20480  0
+hid_generic            12288  0
+usbhid                 86016  0
+hid                   278528  2 usbhid,hid_generic
+joydev                 32768  0
+snd_intel8x0           57344  1
+snd_ac97_codec        221184  1 snd_intel8x0
+ac97_bus               12288  1 snd_ac97_codec
+pcspkr                 12288  0
+snd_pcm               212992  2 snd_intel8x0,snd_ac97_codec
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   159744  10 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm
+vboxguest              53248  6 vboxsf
+soundcore              16384  1 snd
+ac                     16384  0
+sg                     45056  0
+evdev                  32768  10
+efi_pstore             12288  0
+configfs               65536  1
+nfnetlink              20480  1
+vsock_loopback         12288  0
+vmw_vsock_virtio_transport_common    57344  1 vsock_loopback
+vmw_vsock_vmci_transport    49152  0
+vsock                  69632  3 vmw_vsock_virtio_transport_common,vsock_loopback,vmw_vsock_vmci_transport
+vmw_vmci              102400  1 vmw_vsock_vmci_transport
+autofs4                61440  2
+ext4                 1257472  1
+crc16                  12288  1 ext4
+mbcache                20480  1 ext4
+jbd2                  196608  1 ext4
+crc32c_cryptoapi       12288  0
+vboxvideo              45056  1
+sr_mod                 28672  0
+sd_mod                 94208  1
+drm_vram_helper        20480  1 vboxvideo
+cdrom                  86016  1 sr_mod
+drm_ttm_helper         20480  3 drm_vram_helper,vboxvideo
+ghash_clmulni_intel    12288  0
+ttm                   135168  2 drm_vram_helper,drm_ttm_helper
+ata_generic            12288  0
+ohci_pci               20480  0
+video                  81920  0
+ehci_pci               16384  0
+ata_piix               45056  0
+drm_client_lib         16384  1 vboxvideo
+ehci_hcd              122880  1 ehci_pci
+ahci                   53248  1
+libahci                61440  1 ahci
+drm_kms_helper        249856  4 drm_vram_helper,vboxvideo,drm_ttm_helper,drm_client_lib
+wmi                    28672  1 video
+ohci_hcd               73728  1 ohci_pci
+libata                483328  4 ata_piix,libahci,ahci,ata_generic
+usbcore               434176  5 ohci_hcd,ehci_pci,usbhid,ehci_hcd,ohci_pci
+aesni_intel           102400  0
+drm                   880640  8 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,drm_client_lib,ttm
+scsi_mod              327680  4 sd_mod,libata,sg,sr_mod
+usb_common             20480  3 ohci_hcd,usbcore,ehci_hcd
+button                 28672  0
+psmouse               229376  0
+e1000                 188416  0
+scsi_common            16384  5 scsi_mod,sd_mod,libata,sg,sr_mod
+battery                28672  0
+serio_raw              16384  0
+i2c_piix4              36864  0
+i2c_smbus              20480  1 i2c_piix4
